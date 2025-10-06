@@ -54,14 +54,11 @@ const Footer = () => {
           
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'center', sm: 'flex-end' } }}>
             <Box sx={{ display: 'flex', gap: 1, mb: 1 }}>
-              <IconButton size="small" aria-label="github" color="primary">
+              <IconButton size="small" aria-label="github" color="primary" href="https://github.com/Mario5T">
                 <GitHubIcon fontSize="small" />
               </IconButton>
-              <IconButton size="small" aria-label="linkedin" color="primary">
+              <IconButton size="small" aria-label="linkedin" color="primary" href="https://www.linkedin.com/in/aditya-singh-032180330/">
                 <LinkedInIcon fontSize="small" />
-              </IconButton>
-              <IconButton size="small" aria-label="twitter" color="primary">
-                <TwitterIcon fontSize="small" />
               </IconButton>
             </Box>
             <Typography variant="body2" color="text.secondary">
