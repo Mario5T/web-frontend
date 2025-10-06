@@ -80,7 +80,7 @@ function App() {
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
-          minHeight: 'calc(100vh - 64px)', // Subtract AppBar height
+          minHeight: 'calc(100vh - 64px)', 
         }}
       >
         <Box sx={{ flexGrow: 1 }}>

@@ -7,8 +7,6 @@ const MapView = ({ location, title, description }) => {
   const { darkMode } = useTheme();
   
   useEffect(() => {
-    // If we have a map element and location, we would initialize a map here
-    // For now, we'll just display the coordinates
   }, [location]);
 
   const openInGoogleMaps = () => {

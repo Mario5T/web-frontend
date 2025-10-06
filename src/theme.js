@@ -250,6 +250,4 @@ export const darkTheme = createTheme({
   },
   spacing: 8,
 });
-
-// Export default theme as lightTheme for backward compatibility
 export default lightTheme;

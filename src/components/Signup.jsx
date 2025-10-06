@@ -31,7 +31,6 @@ const Signup = () => {
       setFormData({
         ...formData,
         role: newRole,
-        // Clear fields when switching roles
         email: '',
         phone: '',
       });
@@ -75,8 +74,6 @@ const Signup = () => {
     if (!validateForm()) return;
 
     setLoading(true);
-
-    // Prepare payload based on role (matching React Native logic)
     const payload =
       formData.role === 'student'
         ? { name: formData.name, email: formData.email, password: formData.password, role: formData.role }

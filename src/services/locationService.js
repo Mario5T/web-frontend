@@ -1,6 +1,4 @@
-// Location service for handling browser geolocation
 const locationService = {
-  // Request location permission
   requestPermission: async () => {
     return new Promise((resolve) => {
       if ('geolocation' in navigator) {
@@ -15,7 +13,6 @@ const locationService = {
     });
   },
 
-  // Get current position
   getCurrentPosition: () => {
     return new Promise((resolve, reject) => {
       if ('geolocation' in navigator) {
@@ -36,7 +33,6 @@ const locationService = {
     });
   },
 
-  // Watch position changes
   watchPosition: (callback) => {
     if ('geolocation' in navigator) {
       const watchId = navigator.geolocation.watchPosition(

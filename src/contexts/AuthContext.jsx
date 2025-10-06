@@ -16,7 +16,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in on app start (matching React Native pattern)
     const initAuth = async () => {
       try {
         const token = localStorage.getItem('token');
@@ -44,7 +43,6 @@ export const AuthProvider = ({ children }) => {
         throw new Error('No token received from server');
       }
 
-      // Store token and role in localStorage (matching React Native pattern)
       localStorage.setItem('token', token);
       localStorage.setItem('userRole', role);
 
@@ -62,8 +60,6 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await authAPI.signup(userData);
       const { token, role } = response.data;
-
-      // Store token and role in localStorage (matching React Native pattern)
       localStorage.setItem('token', token);
       localStorage.setItem('userRole', role);
 
@@ -83,7 +79,6 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       console.error('Logout error:', error);
     } finally {
-      // Clear localStorage (matching React Native pattern)
       localStorage.removeItem('token');
       localStorage.removeItem('userRole');
       setUser(null);

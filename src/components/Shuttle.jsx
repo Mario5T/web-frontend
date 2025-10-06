@@ -58,13 +58,12 @@ const Shuttle = () => {
       setLoading(true);
       const response = await shuttleAPI.getDrivers();
       setDrivers(response.data || []);
-      setError(null); // Clear any previous errors on success
+      setError(null); 
     } catch (err) {
       console.error('Error fetching drivers:', err);
-      setDrivers([]); // Ensure drivers is an empty array on error
+      setDrivers([]); 
       setError('Failed to fetch drivers. Please try again later.');
       
-      // If admin user, make sure we still show their location even if driver fetch fails
       if (user?.role === 'admin') {
         getAdminLocation();
       }

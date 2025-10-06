@@ -130,8 +130,6 @@ const Profile = () => {
           {error}
         </Alert>
       )}
-
-      {/* Profile Header Card */}
       <Card
         sx={{
           mb: 4,
@@ -234,7 +232,6 @@ const Profile = () => {
       </Card>
 
       <Grid container spacing={{ xs: 2, sm: 3 }}>
-        {/* Active Sessions */}
         <Grid item xs={12} lg={8}>
           <Card sx={{
             height: '100%',
@@ -380,7 +377,6 @@ const Profile = () => {
           </Card>
         </Grid>
 
-        {/* Account Information & Actions */}
         <Grid item xs={12} lg={4}>
           <Card sx={{
             mb: 3,
@@ -468,7 +464,6 @@ const Profile = () => {
             </CardContent>
           </Card>
 
-          {/* Action Buttons */}
           <Card>
             <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
               <Button
@@ -510,8 +505,6 @@ const Profile = () => {
           </Card>
         </Grid>
       </Grid>
-
-      {/* Logout Confirmation Dialog */}
       <Dialog
         open={logoutDialog}
         onClose={() => setLogoutDialog(false)}

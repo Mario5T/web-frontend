@@ -55,7 +55,6 @@ const Menu = () => {
       setLoading(true);
       setError('');
       const response = await menuAPI.getAllMenus();
-      // Handle different response formats
       let data = response.data;
       if (typeof data === 'string') {
         data = JSON.parse(data);
@@ -244,7 +243,6 @@ const Menu = () => {
         </Card>
       ) : (
         <>
-          {/* Day Selector */}
           <Card sx={{ mb: 4, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
             <CardContent sx={{ pb: 2 }}>
               <Tabs
@@ -285,7 +283,6 @@ const Menu = () => {
             </CardContent>
           </Card>
 
-          {/* Selected Day Content */}
           {selectedDay && menuData[selectedDay] && (
             <>
               <Card
@@ -351,7 +348,6 @@ const Menu = () => {
         </>
       )}
 
-      {/* Add Menu Dialog - Admin Only */}
       {user?.role === 'admin' && (
         <Dialog
           open={openDialog}
@@ -439,7 +435,6 @@ const Menu = () => {
         </Dialog>
       )}
 
-      {/* Upload File Dialog - Admin Only */}
       {user?.role === 'admin' && (
         <Dialog
           open={uploadDialog}
